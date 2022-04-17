@@ -21,7 +21,9 @@ class Listview1Screen extends StatelessWidget {
                       title: Text(game),
                       trailing: const Icon(Icons.arrow_forward_ios_outlined),
                     ))
-                .toList()
+                .toList(),
+            Divider(),
+            //Image.asset('assets\imagen_vocalista.jpg')
           ],
         ));
   }
