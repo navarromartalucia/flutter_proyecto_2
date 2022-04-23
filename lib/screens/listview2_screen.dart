@@ -13,11 +13,7 @@ class Listview2Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('List View Tipo 2'),
-          elevation: 0, //quita sombra
-          backgroundColor: Colors.pink[300],
-        ),
+        appBar: AppBar(title: const Text('List View Tipo 2')),
         body: ListView.separated(
             itemBuilder: (context, index) => ListTile(
                   onTap: () {},
