@@ -5,12 +5,6 @@ import 'package:flutter/material.dart';
 class AppRoutes {
   static const initialRoute = 'home';
   static final menuOptions = <MenuOption>[
-    // TODO: borrar home
-    MenuOption(
-        route: 'home',
-        name: 'Home Screen',
-        screen: const HomeScreen(),
-        icon: Icons.home),
     MenuOption(
         route: 'listview2',
         name: 'Listview 2',
@@ -25,7 +19,22 @@ class AppRoutes {
         route: 'card',
         name: 'Card Screen',
         screen: const CardScreen(),
-        icon: Icons.card_giftcard)
+        icon: Icons.card_giftcard),
+    MenuOption(
+        route: 'avatar',
+        name: 'Circle avatar',
+        screen: const AvatarScreen(),
+        icon: Icons.supervised_user_circle_outlined),
+    MenuOption(
+        route: 'animated',
+        name: 'Animated Container',
+        screen: const AnimatedScreen(),
+        icon: Icons.play_circle_outline_rounded),
+    MenuOption(
+        route: 'inputs',
+        name: 'Input',
+        screen: const InputsScreen(),
+        icon: Icons.input_rounded)
   ];
 
   //static Map<String, Widget Function(BuildContext)> routes = {
@@ -37,6 +46,7 @@ class AppRoutes {
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
+    appRoutes.addAll({'home': (BuildContext context) => const HomeScreen()});
     for (final option in menuOptions) {
       appRoutes.addAll({option.route: (BuildContext context) => option.screen});
     }

@@ -1,3 +1,4 @@
+import 'package:fl_components/widgets/custom_card_type_2.dart';
 import 'package:flutter/material.dart';
 
 class Listview2Screen extends StatelessWidget {
