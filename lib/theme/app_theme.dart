@@ -11,7 +11,24 @@ class AppTheme {
       floatingActionButtonTheme:
           const FloatingActionButtonThemeData(backgroundColor: primary),
       elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(primary: AppTheme.primary)));
+        style: ElevatedButton.styleFrom(primary: AppTheme.primary)),
+    inputDecorationTheme: const InputDecorationTheme(
+        floatingLabelStyle: TextStyle(color: primary),
+        enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: primary),
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(10),
+                topRight: Radius.circular(10))),
+        focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: primary),
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(10),
+                topRight: Radius.circular(10))),
+        border: OutlineInputBorder(
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(10),
+                topRight: Radius.circular(10)))),
+  );
   //scaffoldBackgroundColor: Color.fromARGB(255, 255, 255, 255));
 
   static final ThemeData rainbowTheme = ThemeData.light().copyWith(
