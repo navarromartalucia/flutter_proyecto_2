@@ -9,20 +9,22 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final menuOptions = AppRoutes.menuOptions;
     return Scaffold(
-        appBar: AppBar(title: const Text('Componentes en flutter')),
-        body: ListView.separated(
-            itemBuilder: (context, index) => ListTile(
-                  title: Text(menuOptions[index].name),
-                  leading: Icon(menuOptions[index].icon,
-                      color: AppTheme.pinkTheme.primaryColor),
-                  onTap: () {
-                    //final route = MaterialPageRoute(
-                    //  builder: (context) => Listview1Screen());
-                    //Navigator.push(context, route);
-                    Navigator.pushNamed(context, menuOptions[index].route);
-                  },
-                ),
-            separatorBuilder: (_, __) => const Divider(),
-            itemCount: menuOptions.length));
+      appBar: AppBar(title: const Text('Componentes en flutter')),
+      body: ListView.separated(
+          itemBuilder: (context, index) => ListTile(
+                title: Text(menuOptions[index].name),
+                leading: Icon(menuOptions[index].icon,
+                    color: AppTheme.pinkTheme.primaryColor),
+                onTap: () {
+                  //final route = MaterialPageRoute(
+                  //  builder: (context) => Listview1Screen());
+                  //Navigator.push(context, route);
+                  Navigator.pushNamed(context, menuOptions[index].route);
+                  // const AboutListTile();
+                },
+              ),
+          separatorBuilder: (_, __) => const Divider(),
+          itemCount: menuOptions.length),
+    );
   }
 }
